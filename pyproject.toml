@@ -45,3 +45,9 @@ indent-style = "space"
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["tests"]
+
+[tool.taskipy.tasks]
+dev = "uvicorn app.main:app --reload"
+test = "pytest"
+lint = "ruff check ."
+format = "ruff format ."
